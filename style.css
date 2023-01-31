@@ -19,13 +19,14 @@ button {
     font-size: 16px;
   }
 
-p {
-    color:#242424;
-    width: 500px auto;
-}
-
 #returnedCard {
     font-weight: bold;
     color: #ff0000;
     width: auto;
+    font-size: 35px;
+}
+
+p {
+    color:#242424;
+    width: 500px auto;
 }
