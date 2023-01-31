@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    background-color: #c3e8fd;
+}
+
+h1 {
+    color: #006eff;
+    font-size: 60px;
+    text-align: center;
+}
+
+button {
+    background-color: #fd6500;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+p {
+    color:#242424;
+    width: 500px auto;
+}
+
+#returnedCard {
+    font-weight: bold;
+    color: #ff0000;
+    width: auto;
+}
