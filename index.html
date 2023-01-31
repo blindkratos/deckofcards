@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>deckOfCards WebApp</title>
+        <script>
+            const originalDeck = ["ACE of Hearts", "2 of Hearts", "3 of Hearts", "4 of Hearts", "5 of Hearts", "6 of Hearts", "7 of Hearts", "8 of Hearts", "9 of Hearts", "10 of Hearts", "JACK of Hearts", "QUEEN of Hearts", "KING of Hearts", "ACE of Clubs", "2 of Clubs", "3 of Clubs", "4 of Clubs", "5 of Clubs", "6 of Clubs", "7 of Clubs", "8 of Clubs", "9 of Clubs", "10 of Clubs", "JACK of Clubs","QUEEN of Clubs","KING of Clubs","ACE of Diamonds", "2 of Diamonds", "3 of Diamonds","4 of Diamonds","5 of Diamonds","6 of Diamonds","7 of Diamonds","8 of Diamonds","9 of Diamonds","10 of Diamonds","JACK of Diamonds","QUEEN of Diamonds","KING of Diamonds","ACE of Spades", "2 of Spades", "3 of Spades","4 of Spades","5 of Spades","6 of Spades","7 of Spades","8 of Spades","9 of Spades","10 of Spades","JACK of Spades","QUEEN of Spades","KING of Spades","Joker One", "Joker Two"];
+            
+            function randNum(min, max) {
+                return Math.floor((Math.random() * max - min) + min)
+            }
+            
+            function shuffleDeck(deck) {
+                let shuffledDeck = [];
+                for (i = 0; i < deck.length; i++) {
+                    let randomCard = randNum(0, deck.length)
+                    if (shuffledDeck.includes(originalDeck[randomCard])) {
+                        i--;
+                    } else {
+                        shuffledDeck.push(originalDeck[randomCard])
+                    }
+                }
+                return shuffledDeck;
+            }
+            
+            function pullCard(deck) {
+                if (deck.length > 0) {
+                    return alert(deck.shift());
+                } else {
+                    return alert("There are no cards left in the deck!");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="heading">
+            <h1>deckOfCards WebApp</h1>
+            <p>A webapp written in javascript to complete a Deck of Cards workout. Shuffle your deck, and then pull each card and complete your exercises and reps until there are no cards left in the deck!</p>
+        </div>
+        <div id="shuffle"> 
+            <h4>Shuffle Your Deck!</h4>
+            <script>let randomDeck = [];</script>
+            <button type="button" onclick="randomDeck = shuffleDeck(originalDeck)">Shuffle</button>
+        </div>
+        <div id="pullCard">
+            <h3>Pull Your Cards!</h3>
+            <button type="button" onclick="pullCard(randomDeck)">New Card</button>
+        </div>
+    </body>
+</html>
