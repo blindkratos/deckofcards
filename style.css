@@ -30,3 +30,9 @@ p {
     color:#242424;
     width: 500px auto;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
